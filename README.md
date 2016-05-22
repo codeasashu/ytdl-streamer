@@ -22,3 +22,7 @@ In the end
 
 This will automatically pick best result from youtube api for the search term
 and will start playing the mp3 for you. 
+
+### Sidenote
+This program requires `ffmpeg`. Please install one before using this script.
+For Ubuntu 12.04 or 14.04 users, use [this bash script](https://gist.github.com/xdamman/e4f713c8cd1a389a5917) 
