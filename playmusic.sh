@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo Enter music name ":"
+X="$1"
+if [[ -z "$X" ]]; then
+	echo Enter song ": " 
+	read X
+fi	
 
-read x
-
-youtube-dl -f worst -o - $(python search.py -b -q "$x") | ffmpeg -i - -ab 192k -vn -acodec libmp3lame -f mp3 - |  mplayer -
+youtube-dl -f worst -o - $(python search.py -b -q "$X") |  mplayer -novideo -
