@@ -14,10 +14,8 @@ Here is the whole process summarized for newbies:
 ```
 machine@localhost$ git clone "https://github.com/ashutosh2k12/ytdl-streamer.git"
 machine@localhost$ cd ytdl-streamer
-machine@localhost$ sudo chmod +x ./playmusic.sh
-machine@localhost$ ./playmusic.sh
-Enter music name:
-In the end
+machine@localhost$ sudo chmod +x ./playmusic.sh 
+machine@localhost$ ./playmusic.sh "in the end linkin park"
 ```
 
 This will automatically pick best result from youtube api for the search term
