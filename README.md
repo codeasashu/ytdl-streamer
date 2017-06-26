@@ -1,19 +1,21 @@
 # ytdl-streamer
 
-##Introduction
+## Introduction
 
 A simple bash script that can stream your youtube video right to your player right from terminal
 
-##Useage
+## Useage
 
-Clone or download this repo. `cd` to your repo directory. 
+Clone or download this repo. `cd` to your repo directory. Install required dependencies via [pip](https://pypi.python.org/pypi/pip). 
+
 Just execute `sudo chmod +x ./playmusic.sh` and run. It will ask you to input your search term, and will stream it directly to [mplayer](https://help.ubuntu.com/community/MPlayer)
 
-Here is the whole process summarized for newbies:
+Here is the whole process summarized:
 
 ```
 machine@localhost$ git clone "https://github.com/ashutosh2k12/ytdl-streamer.git"
 machine@localhost$ cd ytdl-streamer
+machine@localhost$ pip install -r requirements.txt
 machine@localhost$ sudo chmod +x ./playmusic.sh 
 machine@localhost$ ./playmusic.sh "in the end linkin park"
 ```
