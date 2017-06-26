@@ -13,7 +13,7 @@ Just execute `sudo chmod +x ./playmusic.sh` and run. It will ask you to input yo
 Here is the whole process summarized:
 
 ```
-machine@localhost$ git clone "https://github.com/ashutosh2k12/ytdl-streamer.git"
+machine@localhost$ git clone "https://github.com/codeasashu/ytdl-streamer.git"
 machine@localhost$ cd ytdl-streamer
 machine@localhost$ pip install -r requirements.txt
 machine@localhost$ sudo chmod +x ./playmusic.sh 
