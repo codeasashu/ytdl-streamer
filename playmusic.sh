@@ -6,4 +6,4 @@ if [[ -z "$X" ]]; then
 	read X
 fi	
 
-youtube-dl -f worst -o - $(python search.py -b -q "$X") |  mplayer -novideo -
+youtube-dl -f worst -o - $(python search.py -b -q "$X") |  mpv - 

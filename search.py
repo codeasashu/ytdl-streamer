@@ -33,13 +33,13 @@ def youtube_search(topic,best):
   videos = []
   i = 1
 
-  # Print the title and ID of each matching resource.
+  # print( the title and ID of each matching resource.
   for search_result in search_response.get("items", []):
     if search_result["id"]["kind"] == "youtube#video":
       if best is False:
-        print "%d - %s (%s)" % (i, search_result["snippet"]["title"],
-        "https://youtube.com/watch?v=" +search_result["id"]["videoId"])
-        print "\n"
+        print( "%d - %s (%s)" % (i, search_result["snippet"]["title"],
+        "https://youtube.com/watch?v=" +search_result["id"]["videoId"]))
+        print( "\n")
       videos.append("http://youtube.com/watch?v=%s" % search_result["id"]["videoId"])
       i += 1
 
@@ -54,22 +54,18 @@ if __name__ == "__main__":
   best = getattr(args, 'b')
 
   if getattr(args, 'q') is None:
-    print "Please provide a valid query string"
+    print( "Please provide a valid query string")
     sys.exit(0)
 
   query = getattr(args, 'q')
 
-  try:
-    videos = youtube_search(query,best)
-    if best is True:
-      sys.stdout.write(videos[0])
+  videos = youtube_search(query,best)
+  if best is True:
+    sys.stdout.write(videos[0])
+  else:
+    song = raw_input("Enter song number:")
+    song = int(song)
+    if isinstance(song, int) and song < 5:
+      sys.stdout.write(videos[(song-1)])
     else:
-      song = raw_input("Enter song number:")
-      song = int(song)
-      if isinstance(song, int) and song < 5:
-        sys.stdout.write(videos[(song-1)])
-      else:
-        print "Please enter only number"
-      
-  except HttpError, e:
-    print "An HTTP error %d occurred:\n%s" % (e.resp.status, e.content)
+      print( "Please enter only number")
